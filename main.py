@@ -9,7 +9,7 @@ def index():
 	return jsonify({"Choo Choo": "Welcome to your Flask app this rules!!"})
 
 @app.route('/test')
-def index():
+def curious():
 	return jsonify({"YOOOO": "OK"})
 
 if __name__ == '__main__':
