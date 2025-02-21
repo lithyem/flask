@@ -1,7 +1,6 @@
 from flask import Flask, jsonify, request
 import os
-
-app = Flask(__name__)
+from app import app  # Import the Flask app from app.py
 
 @app.route('/')
 def index():
