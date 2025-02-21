@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 import os
 
 app = Flask(__name__)
@@ -21,6 +21,10 @@ def new_screen():
 def himom():
     return jsonify({"message": "hi mom!"})
 
+@app.route('/query')
+def query():
+    query_param = request.args.get('param')
+    return jsonify({"query_param": query_param})
 
 if __name__ == '__main__':
     app.run(debug=True, port=os.getenv("PORT", default=5000))
