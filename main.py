@@ -23,8 +23,8 @@ def himom():
 
 @app.route('/testing')
 def testing():
-    query_param = request.args.get('param')
-    return jsonify({"query_param": query_param})
+    #query_param = request.args.get('param')
+    return jsonify({"query_param": "d"})
 
 if __name__ == '__main__':
     app.run(debug=True, port=os.getenv("PORT", default=5000))
