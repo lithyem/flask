@@ -1,4 +1,4 @@
-from flask import Flask, send_file, render_template, Response
+from flask import Flask, send_file, render_template, Response # type: ignore
 import os
 
 app = Flask(__name__, static_url_path='/static')
