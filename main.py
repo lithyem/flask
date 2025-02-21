@@ -3,19 +3,17 @@ import os
 
 app = Flask(__name__)
 
-
 @app.route('/')
 def index():
-	return jsonify({"Choo Choo": "Welcome to your Flask app this rules!!"})
+    return jsonify({"Choo Choo": "Welcome to your Flask app this rules!!"})
 
 @app.route('/test')
 def curious():
-	return jsonify({"YOOOO": "OK"})
+    return jsonify({"YOOOO": "OK"})
 
 @app.route('/new_screen')
 def new_screen():
     return jsonify({"message": "This is a new screen!"})
-
 
 @app.route('/himom')
 def himom():
