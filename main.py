@@ -2,10 +2,6 @@ from flask import Flask, jsonify, request
 import os
 from app import app  # Import the Flask app from app.py
 
-@app.route('/')
-def index():
-    return jsonify({"Choo Choo": "Welcome to your Flask app this rules!!"})
-
 @app.route('/test')
 def curious():
     return jsonify({"YOOOO": "OK"})
