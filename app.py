@@ -1,4 +1,4 @@
-from flask import Flask, send_file, render_template
+from flask import Flask, send_file, render_template, Response
 import os
 
 app = Flask(__name__, static_url_path='/static')
@@ -8,7 +8,7 @@ def get_notes():
     notes_path = os.path.join(os.path.dirname(__file__), 'notes.txt')
     with open(notes_path, 'r') as file:
         content = file.read()
-    return content
+    return Response(content, mimetype='text/plain')
 
 @app.route('/')
 def index():
