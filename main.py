@@ -21,8 +21,8 @@ def new_screen():
 def himom():
     return jsonify({"message": "hi mom!"})
 
-@app.route('/query')
-def query():
+@app.route('/testing')
+def testing():
     query_param = request.args.get('param')
     return jsonify({"query_param": query_param})
 
