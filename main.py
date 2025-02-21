@@ -4,7 +4,7 @@ from app import app  # Import the Flask app from app.py
 
 @app.route('/test')
 def curious():
-    return jsonify({"YOOOO": "OK"})
+    return jsonify({"YOOOO": "OKman"})
 
 @app.route('/new_screen')
 def new_screen():
