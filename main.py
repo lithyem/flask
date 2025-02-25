@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, request # type: ignore
 import os
-#from app import app  # Import the Flask app from app.py
+from app import app  # Import the Flask app from app.py
 
 @app.route('/test')
 def curious():
